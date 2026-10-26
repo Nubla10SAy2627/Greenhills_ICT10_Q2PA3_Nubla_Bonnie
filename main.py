@@ -15,4 +15,9 @@ def countries_capital(e):
     'Chile':'Santiago'
     }
 
-    display(countries[user_input], target='result')
+    countries_checker = user_input in countries
+    
+    display_message = (f'Sorry, there is no {user_input} in the list', f'{user_input} is in the list')
+    
+    display(display_message[countries_checker], target='result')
+    
